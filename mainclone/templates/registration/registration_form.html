@@ -1,0 +1,20 @@
+{%extends "registration/base.html"%}
+{% load bootstrap4 %}
+{% load static %}
+{% block content %}
+<div class="loginform">
+    <div class="icon instaicon"></div>
+    <div class="invitation">
+        <h3 class="invite">Sign up to see photos and videos from your friends.</h3>
+    </div>
+    <form  action="/accounts/register/" method="post">
+      {% csrf_token %}
+      {% bootstrap_form form%}
+      <div class="form-group" style="text-align: center">
+        <input type="submit" class="btn btn-primary btn-sm" value="Login">
+      </div>
+
+    </form>
+    </div>
+</div>
+{% endblock %}
