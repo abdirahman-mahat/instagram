@@ -1,31 +1,25 @@
 # INSTAGRAM CLONE
-> Moringa school IP
-[Live Link](https://not-instagram.herokuapp.com/)
+
 ## Description
-This is a clone of the image sharing network, Instagram. 
+This is a clone of the image sharing network, Instagram.
 Users can sign up login, view and post photos and follow other users.
 
 ## Author
-### Xavier Kibet
+### Aabdirahman mahat
 
-## User Stories
-1. Register and Sign in to the application.
-2. Upload my pictures to the application.
-3. See my profile with all my pictures.
-4. Follow other users and see their pictures on my timeline.
-5. Like or Save a picture and leave a comment on it.
+
 
 
 ## Setup and installation
 
 #### Clone the Repo
-    git clone https://github.com/reivhax/Not-Instagram 
-    cd Not-Instagram
+    git clone https://github.com/abdirahman-mahat/instagram
+    cd instagram
 ####  Activate virtual environment
 create and acvite a virtual environment
     `python3.6 -m venv virtual && source virtual/bin/activate`
 ####  Install dependancies
-Install dependancies that will create an environment for the app to run 
+Install dependancies that will create an environment for the app to run
 `pip install -r requirements.txt`
 ####  Create the Database
     - psql
@@ -34,7 +28,7 @@ Install dependancies that will create an environment for the app to run
 Create .env file and paste paste the following filling where appropriate:
 
     SECRET_KEY = '<Secret_key>'
-    DBNAME = 'instaclone'
+    DBNAME = 'database name'
     USER = '<Username>'
     PASSWORD = '<password>'
     DEBUG = True
