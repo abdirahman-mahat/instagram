@@ -2,19 +2,39 @@
 {% load bootstrap4 %}
 {% load static %}
 {% block content %}
-<div class="loginform">
-    <div class="icon instaicon"></div>
-    <div class="invitation">
-        <h3 class="invite">Sign up to see photos and videos from your friends.</h3>
-    </div>
-    <form  action="/accounts/register/" method="post">
-      {% csrf_token %}
-      {% bootstrap_form form%}
-      <div class="form-group" style="text-align: center">
-        <input type="submit" class="btn btn-primary btn-sm" value="Login">
-      </div>
 
-    </form>
+  <div class="login-clean">
+    <form action="/accounts/register/" method="post">
+      <div class="illustration"><img src="/static/img/home-logo.png"></div>
+      {%csrf_token%}
+      {% for field in form %}
+        <div class='fieldWrapper'>
+          <h5 style='text-align:center;font-family"Roboto", sans-serif;font-size:14px;'>{{field.label}}</h5>
+
+          <p style='width:100%;text-align:center;'>{{field}}</p>
+        </div>
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      {% endfor %}
+
+      <input type="submit" class="btn btn-primary btn-sm" value="Sign Up" style='text-align:center;font-family"Roboto", sans-serif;font-size:14px;width:100%;margin-top:20px;'>
+      <a href="/accounts/login/" class="forgot">Already got an account? Login here ...</a>
+      <h5 style='color:grey;text-align:center;font-size:15px;padding-top:20px;'>By signing up, you agree to our
+        <strong>
+          <a href='https://help.instagram.com/581066165581870' style='color:grey'>Terms</a>
+        </strong>,
+        <strong>
+          <a href='https://help.instagram.com/519522125107875' style='color:grey'>Data Policy</strong>
+          and
+          <strong>
+            <a href='https://www.instagram.com/legal/cookies/' style='color:grey'>Cookies Policy</strong>
+          </a>
+        </h5>
+      </form>
+
     </div>
-</div>
+
+  </div>
+
 {% endblock %}
