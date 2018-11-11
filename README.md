@@ -5,7 +5,7 @@ This is a clone of the image sharing network, Instagram.
 Users can sign up login, view and post photos and follow other users.
 
 ## Author
-### Aabdirahman mahat
+### Abdirahman mahat
 
 
 
