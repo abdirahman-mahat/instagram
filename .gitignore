@@ -1,4 +1,5 @@
-
+media/
 .idea/
 virtual/
 *.pyc
+*.env
