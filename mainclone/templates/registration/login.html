@@ -4,27 +4,19 @@
 {% block content %}
   <div class="login-clean">
     <form action="/accounts/login/" method="post">
-      <div class="illustration"><img src="/static/img/home-logo.png"></div>
-      {%csrf_token%}
-      {% for field in form %}
-        <div class='fieldWrapper'>
-          <h5 style='text-align:center;font-family"Roboto", sans-serif;font-size:14px;'>{{field.label}}</h5>
+      <h3 class="invite"><img src="/static/img/home-logo.png"></h3>
 
-          <p style='width:100%;text-align:center;'>{{field}}</p>
-        </div>
-        {% for error in field.errors %}
-          <p style="color: red">{{ error }}</p>
-        {% endfor %}
-      {% endfor %}
-      {% if user.is_authenticated%}
-        <input type='hidden' name='next' value='/'>
-        {%endif%}
-        <a href="/accounts/register/" class="forgot">Dont have an account? sign up here ...</a>
-
-        <input type="submit" class="btn btn-primary btn-sm" value=' Login ' style='text-align:center;font-family"Roboto", sans-serif;font-size:14px;width:100%;margin-top:20px;'>
-
-      </form>
-
-    </div>
-
-  {% endblock %}
+      {% csrf_token %}
+      {% bootstrap_form form%}
+      <input type="hidden" name="next" value="/">
+      <div class="form-group" style="text-align: center">
+        <input type="submit" class="btn btn-primary btn-sm" value="Login">
+      </div>
+      <div class="invite" style="margin:0 0 5px 0;">
+        Dont have an account?
+        <a href="/accounts/register">Sign up</a>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
