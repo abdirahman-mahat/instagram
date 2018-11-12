@@ -1,4 +1,4 @@
-# INSTAGRAM CLONE
+# Instagram
 
 ## Description
 This is a clone of the image sharing network, Instagram.
