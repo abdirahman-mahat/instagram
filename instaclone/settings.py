@@ -34,7 +34,7 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-ALLOWED_HOSTS='insta-manka.herokuapp.com'
+ALLOWED_HOSTS='https://insta-manka.herokuapp.com'
 MODE=config("MODE", default="dev")
 
 
